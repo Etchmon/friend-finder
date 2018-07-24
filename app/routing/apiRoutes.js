@@ -46,10 +46,6 @@ module.exports = function(app) {
 
 
         friends.push(posted);
-
-        res.json({
-            match: trueLove
-        })
     
     });
 };
