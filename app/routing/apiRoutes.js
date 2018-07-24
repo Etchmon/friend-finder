@@ -1,27 +1,56 @@
-var express = require("express");
-var bodyParser = require("body-parser");
+var friends = require("../data/friend");
 var path = require("path");
 
-// Sets up the Express App
-// =============================================================
-var app = express();
-var PORT = process.env.PORT || 3001;
 
-// Sets up the Express app to handle data parsing
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+module.exports = function(app) {
+    app.get("/api/friends", function(req, res){
+        console.log(friends);
+        res.json(friends);
+    });
+    
+    app.post("/api/friends", function(req,res){
+    
+        var posted = req.body;
+        var sort;
+        var check;
+        var trueLove = [];
 
-var friends = [];
+        for(var i = 0; i<req.body.score.length; i++){
+            posted.score[i] = parseInt(posted.score[i]);
+            sort = posted.score[i];
 
-app.get("/api/friends", function(req, res){
-    console.log();
-    return res.json();
-});
+        };
 
-app.post("/api/friends", function(req,res){
+        for(var i = 0;i<friends.length; i++){
+            for(var j = 0; j<10; j++){
+                var check = friends[i].scores[j];
+                var match = check - sort;
+                if(match === 0){
+                    friends[i].loved++;
+                }
+            };
+            for(var k = 1; k<friends.length; k++){
+                if(friends[i].loved>friends[k].loved){
+                    trueLove.push(friends[i].name);
+                }
+            };
+        };
 
-    var posted = req.body;
+        console.log(trueLove);
 
-    console.log(posted);
+        res.json({
+            name: posted.name,
+            img: posted.imgLink,
+            score: posted.score
+        });
 
-})
+
+        friends.push(posted);
+
+        res.json({
+            match: trueLove
+        })
+    
+    });
+};
+

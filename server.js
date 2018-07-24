@@ -9,6 +9,9 @@ var PORT = process.env.PORT || 3001;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+require("../friend-finder/app/routing/apiRoutes")(app);
+require("../friend-finder/app/routing/htmlRoutes")(app);
+
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 });

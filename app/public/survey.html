@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
         crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
@@ -31,8 +30,8 @@
         <input id="link" class="form-control" type="text" placeholder="Default input">
 
         <h1>Question 1</h1>
-        <p></p>
-        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+        <p>Your mind is always buzzing with unexplored ideas and plans</p>
+        <select id="userChoice1" class="custom-select" aria-labelledby="dropdownMenuButton">
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -40,8 +39,8 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
         <h1>Question 2</h1>
-        <p></p>
-        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+        <p>Generally speaking, you rely more on your experience than your imagination.</p>
+        <select id="userChoice2" class="custom-select" aria-labelledby="dropdownMenuButton">
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -49,8 +48,9 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
         <h1>Question 3</h1>
-        <p></p>
-        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+        <p>You find it easy to stay relaxed and focused even when there is some pressure.
+            </p>
+        <select id="userChoice3" class="custom-select" aria-labelledby="dropdownMenuButton">
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -58,8 +58,8 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
         <h1>Question 4</h1>
-        <p></p>
-        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+        <p>You rarely do something just out of sheer curiosity.</p>
+        <select id="userChoice4" class="custom-select" aria-labelledby="dropdownMenuButton">
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -67,8 +67,8 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
         <h1>Question 5</h1>
-        <p></p>
-        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+        <p>People can rarely upset you.</p>
+        <select id="userChoice5" class="custom-select" aria-labelledby="dropdownMenuButton">
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -76,8 +76,8 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
         <h1>Question 6</h1>
-        <p></p>
-        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+        <p>It is often difficult for you to relate to other people’s feelings</p>
+        <select id="userChoice6" class="custom-select" aria-labelledby="dropdownMenuButton">
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -85,8 +85,8 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
         <h1>Question 7</h1>
-        <p></p>
-        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+        <p>In a discussion, truth should be more important than people’s sensitivities</p>
+        <select id="userChoice7" class="custom-select" aria-labelledby="dropdownMenuButton">
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -94,8 +94,8 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
         <h1>Question 8</h1>
-        <p></p>
-        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+        <p>You rarely get carried away by fantasies and ideas.</p>
+        <select id="userChoice8" class="custom-select" aria-labelledby="dropdownMenuButton">
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -103,8 +103,8 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
         <h1>Question 9</h1>
-        <p></p>
-        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+        <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</p>
+        <select id="userChoice9" class="custom-select" aria-labelledby="dropdownMenuButton">
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -112,8 +112,8 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
         <h1>Question 10</h1>
-        <p></p>
-        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+        <p>You feel more energetic after spending time with a group of people.</p>
+        <select id="userChoice10" class="custom-select" aria-labelledby="dropdownMenuButton">
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -125,6 +125,37 @@
     <br>
 
     <div class="container">
-            <button id="submit" type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+        <button id="submit" type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
     </div>
+
+    <script>
+
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+
+            var scores = [];
+
+            for (var i = 1; i < 11; i++) {
+                scores.push($("#userChoice" + i).val());
+                console.log(scores)
+            }
+
+            console.log($("#userChoice").val())
+
+            var newFriend = {
+                name: $("#name").val().trim(),
+                imgLink: $("#link").val().trim(),
+                score: scores
+            };
+
+            $.post("/api/friends", newFriend, function(data) {
+            if (data) {
+                console.log("Friend Added")
+            }
+
+            $("#name").val("");
+            $("#link").val("");
+        })
+        });
+    </script>
 </body>
