@@ -6,15 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder</title>
-    <link rel="stylesheet" href="/app/public/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -50,7 +45,7 @@
         </select>
         <h1>Question 3</h1>
         <p>You find it easy to stay relaxed and focused even when there is some pressure.
-            </p>
+        </p>
         <select id="userChoice3" class="custom-select" aria-labelledby="dropdownMenuButton">
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -149,14 +144,14 @@
                 score: scores
             };
 
-            $.post("/api/friends", newFriend, function(data) {
-            if (data) {
-                console.log("Friend Added")
-            }
+            $.post("/api/friends", newFriend, function (data) {
+                if (data) {
+                    console.log("Friend Added")
+                }
 
-            $("#name").val("");
-            $("#link").val("");
-        })
+                $("#name").val("");
+                $("#link").val("");
+            })
         });
     </script>
 </body>
